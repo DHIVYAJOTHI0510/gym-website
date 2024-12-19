@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #0b0a0a;
+    scroll-behavior: smooth;
+  }
+  
+  /* Header Section */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  
+  .gym-name {
+    font-size: 1.5rem;
+    color: rgb(247, 250, 251);
+    font-family: 'Lucida Handwriting', cursive;
+  }
+  
+  .menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menu ul li a:hover {
+    color: #f4c542;
+  }
+  
+  /* About Section */
+  .about-section {
+    margin-top: 80px; /* Avoid overlap with the header */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInLeft 1.5s ease-in-out;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f4c542;
+    text-decoration: underline;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #f4c542;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #c9152a;
+  }
+  .dark-word {
+    color: #f4c542; /* Black text */
+    font-weight: bold; /* Makes it bold */
+  }
+  
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeInRight 1.5s ease-in-out;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  #about {
+    padding: 20px;
+    background-color: black /* Light background for contrast */
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .about-text {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem; /* Fixed size for all text */
+    line-height: 1.6; /* Improves readability */
+    color:white;
+    margin-right: 20px;
+  }
+  
+  .about-text p,
+  .about-text ol,
+  .about-text li {
+    font-size: inherit; /* Ensures consistent font size */
+    margin-bottom: 15px;
+  }
+  
+  .about-video {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-video video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 3px solid #e63946;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Animations */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

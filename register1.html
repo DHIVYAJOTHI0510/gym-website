@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register or Login</title>
+    <link rel="stylesheet" href="registerstyle1.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to FitNest Studio</h1>
+    </div>
+    <div class="main-container">
+        <div class="form-container">
+            <div class="form-card">
+                <h2>Register</h2>
+                <form id="registerForm" onsubmit="handleRegister(event)">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" required>
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" required>
+                    <button type="submit" class="form-btn">Register</button>
+                    <p class="helper-text">Already registered? <a href="#" onclick="toggleForms('login')">Sign In</a></p>
+                </form>
+            </div>
+            <div class="form-card hidden" id="loginForm">
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                    <button type="submit" class="form-btn">Login</button>
+                    <p class="helper-text"><a href="#" onclick="alert('Reset link sent to your email!')">Forgot Password?</a></p>
+                </form>
+            </div>
+        </div>
+        <p id="message" class="success-message"></p>
+    </div>
+    <footer>
+        <p>© 2024 FitNest Studio. All rights reserved.</p>
+    </footer>
+    <script>
+        function handleRegister(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById("reg-username").value;
+            const password = document.getElementById("reg-password").value;
+
+            if (username && password) {
+                // Simulate successful registration
+                alert("Registration successful! Redirecting...");
+                window.location.href = "C:/Users/harish/OneDrive/Desktop/GYMWEBSITE/success.html"; // Redirect to success page
+            } else {
+                alert("Please fill in all required fields.");
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById("login-username").value;
+            const password = document.getElementById("login-password").value;
+
+            if (username && password) {
+                // Simulate login logic
+                alert("Login successful!");
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+
+        function toggleForms(formType) {
+            const registerForm = document.getElementById("registerForm");
+            const loginForm = document.getElementById("loginForm");
+
+            if (formType === "login") {
+                loginForm.classList.remove("hidden");
+                registerForm.parentElement.classList.add("hidden");
+            } else {
+                loginForm.classList.add("hidden");
+                registerForm.parentElement.classList.remove("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
